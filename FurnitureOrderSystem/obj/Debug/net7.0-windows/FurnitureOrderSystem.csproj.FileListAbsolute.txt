@@ -1,0 +1,11 @@
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\FurnitureOrderSystem.csproj.AssemblyReference.cache
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\Account\LoginView.baml
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\Account\RegisterView.baml
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\Account\LoginView.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\Account\RegisterView.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\OrderDetailView.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Views\OrdersView.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Windows\LoginWindow.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\Windows\RegisterWindow.g.cs
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\FurnitureOrderSystem_MarkupCompile.cache
+F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\obj\Debug\net7.0-windows\FurnitureOrderSystem_MarkupCompile.lref
