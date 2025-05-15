@@ -1,0 +1,340 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\ordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\ordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\account\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\account\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\models\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\models\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\account\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\account\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\orderdetailview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\orderdetailview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\ordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\ordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\utilities\\converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\utilities\\converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\utilities\\converters\\orderitemtotalconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\utilities\\converters\\orderitemtotalconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\windows\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\windows\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\views\\account\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\views\\account\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|c:\\users\\user.comp-512-13\\desktop\\diplom\\furnitureordersystem\\furnitureordersystem\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7614AA9-6B5D-4362-B82F-0AD851F3950F}|FurnitureOrderSystem\\FurnitureOrderSystem.csproj|solutionrelative:furnitureordersystem\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:10:45.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\MainWindow.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T04:10:44.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\AssemblyInfo.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:10:41.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Data\\SeedData.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:10:24.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Data\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Data\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Data\\GenericRepository.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Data\\GenericRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:10:21.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrdersView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrdersView.xaml.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\OrdersView.xaml.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrdersView.xaml.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\OrdersView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:39:01.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:38:48.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Windows\\RegisterWindow.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Windows\\RegisterWindow.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Windows\\RegisterWindow.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\Windows\\RegisterWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:21:36.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Windows\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Windows\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Windows\\LoginWindow.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\Windows\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:21:34.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterView.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\Account\\RegisterView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:21:27.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderDetailView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrderDetailView.xaml.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\OrderDetailView.xaml.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrderDetailView.xaml.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\OrderDetailView.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:16:41.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StatusToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Utilities\\Converters\\StatusToColorConverter.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Utilities\\Converters\\StatusToColorConverter.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Utilities\\Converters\\StatusToColorConverter.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Utilities\\Converters\\StatusToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:09:35.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\App.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\App.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\App.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:04:12.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\LoginView.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\Account\\LoginView.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\Account\\LoginView.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\Account\\LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:21:22.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersView.xaml",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrdersView.xaml",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Views\\OrdersView.xaml",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Views\\OrdersView.xaml",
+              "RelativeToolTip": "FurnitureOrderSystem\\Views\\OrdersView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T03:20:55.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderItemTotalConverter.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Utilities\\Converters\\OrderItemTotalConverter.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Utilities\\Converters\\OrderItemTotalConverter.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Utilities\\Converters\\OrderItemTotalConverter.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Utilities\\Converters\\OrderItemTotalConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:09:33.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Services\\NavigationService.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Services\\NavigationService.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Services\\NavigationService.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Services\\NavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:09:30.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Models\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Models\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Models\\Entities\\Order.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Models\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:09:21.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "FurnitureOrderSystem\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\user.COMP-512-13\\Desktop\\Diplom\\FurnitureOrderSystem\\FurnitureOrderSystem\\Services\\IAuthService.cs",
+              "RelativeToolTip": "FurnitureOrderSystem\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:09:23.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

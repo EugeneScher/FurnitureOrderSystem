@@ -1,27 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using FurnitureOrderSystem.Models.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace FurnitureOrderSystem.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для OrdersView.xaml
-    /// </summary>
-    public partial class OrdersView : Window
+    public partial class OrdersView : UserControl // Должен совпадать с XAML
     {
         public OrdersView()
         {
             InitializeComponent();
+            DataContext = App.ServiceProvider.GetRequiredService<OrderViewModel>();
         }
     }
 }

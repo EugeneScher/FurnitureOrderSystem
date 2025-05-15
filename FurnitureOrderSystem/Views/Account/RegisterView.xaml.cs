@@ -17,7 +17,7 @@ namespace FurnitureOrderSystem.Views.Account
     /// <summary>
     /// Логика взаимодействия для RegisterView.xaml
     /// </summary>
-    public partial class RegisterView : Window
+    public partial class RegisterView : UserControl
     {
         public RegisterView()
         {

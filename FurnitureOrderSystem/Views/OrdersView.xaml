@@ -1,61 +1,136 @@
 ﻿<UserControl x:Class="FurnitureOrderSystem.Views.OrdersView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FurnitureOrderSystem.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             xmlns:converters="clr-namespace:FurnitureOrderSystem.Utilities.Converters"
+             xmlns:local="clr-namespace:FurnitureOrderSystem.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <!-- Локальная регистрация конвертера -->
+            <converters:StatusToColorConverter x:Key="StatusToColorConverter"/>
+
+            <!-- Стиль для кнопок действий -->
+            <Style x:Key="ActionButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+                <Setter Property="Margin" Value="5,0"/>
+                <Setter Property="Padding" Value="10,5"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Toolbar -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+        <!-- Панель инструментов -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
             <Button Content="Добавить заказ" 
                     Style="{StaticResource MaterialDesignRaisedButton}"
-                    Command="{Binding AddOrderCommand}"/>
-            <Button Content="Обновить" 
+                    Command="{Binding AddOrderCommand}"
+                    Width="150"/>
+
+            <Button Content="Обновить список" 
                     Style="{StaticResource MaterialDesignRaisedButton}"
                     Command="{Binding LoadOrdersCommand}"
-                    Margin="10,0,0,0"/>
+                    Margin="10,0,0,0"
+                    Width="150"/>
         </StackPanel>
 
-        <!-- Orders List -->
-        <DataGrid Grid.Row="1" 
+        <!-- Список заказов -->
+        <DataGrid Grid.Row="1"
                   ItemsSource="{Binding Orders}"
                   SelectedItem="{Binding SelectedOrder}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
                   SelectionMode="Single"
-                  Margin="10">
+                  HeadersVisibility="Column"
+                  RowDetailsVisibilityMode="VisibleWhenSelected"
+                  materialDesign:DataGridAssist.CellPadding="10,5"
+                  materialDesign:DataGridAssist.ColumnHeaderPadding="10,5">
+
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Номер" Binding="{Binding Id}" Width="Auto"/>
-                <DataGridTextColumn Header="Дата заказа" Binding="{Binding OrderDate, StringFormat={}{0:dd.MM.yyyy}}" Width="Auto"/>
-                <DataGridTextColumn Header="Клиент" Binding="{Binding Customer.Name}" Width="*"/>
-                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalAmount, StringFormat={}{0:C}}" Width="Auto"/>
-                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="Auto">
+                <!-- Номер заказа -->
+                <DataGridTextColumn Header="№" 
+                                   Binding="{Binding Id}" 
+                                   Width="Auto"/>
+
+                <!-- Дата -->
+                <DataGridTextColumn Header="Дата заказа" 
+                                   Binding="{Binding OrderDate, StringFormat='dd.MM.yyyy'}" 
+                                   Width="Auto"/>
+
+                <!-- Клиент -->
+                <DataGridTextColumn Header="Клиент" 
+                                   Binding="{Binding Customer.Name}" 
+                                   Width="*"/>
+
+                <!-- Сумма -->
+                <DataGridTextColumn Header="Сумма" 
+                                   Binding="{Binding TotalAmount, StringFormat='{}{0:C}'}" 
+                                   Width="Auto"/>
+
+                <!-- Статус с конвертером цвета -->
+                <DataGridTextColumn Header="Статус" 
+                                   Binding="{Binding Status}" 
+                                   Width="Auto">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Foreground" Value="{Binding Status, Converter={StaticResource StatusToColorConverter}}"/>
-                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Foreground" 
+                                    Value="{Binding Status, Converter={StaticResource StatusToColorConverter}}"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="5,0"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Width="Auto">
+
+                <!-- Колонка действий -->
+                <DataGridTemplateColumn Header="Действия" Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Просмотр" 
-                                    Style="{StaticResource MaterialDesignFlatButton}"
-                                    Command="{Binding DataContext.ViewOrderCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
-                                    CommandParameter="{Binding}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="Просмотр" 
+                                        Style="{StaticResource ActionButtonStyle}"
+                                        Command="{Binding DataContext.ViewOrderCommand, 
+                                                  RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                        CommandParameter="{Binding}"/>
+
+                                <Button Content="Печать" 
+                                        Style="{StaticResource ActionButtonStyle}"
+                                        Command="{Binding DataContext.PrintOrderCommand, 
+                                                  RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                        CommandParameter="{Binding}"/>
+                            </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
+
+            <!-- Детализация строки -->
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border Margin="10" Padding="10" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Customer.Address}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding DeliveryDate, StringFormat='Дата доставки: {0:dd.MM.yyyy}'}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
         </DataGrid>
+
+        <!-- Статус бар -->
+        <StatusBar Grid.Row="2" Margin="0,10,0,0">
+            <TextBlock Text="{Binding Orders.Count, StringFormat='Всего заказов: {0}'}"/>
+            <Separator/>
+            <TextBlock Text="{Binding SelectedOrder.Status, StringFormat='Текущий статус: {0}'}"/>
+        </StatusBar>
     </Grid>
 </UserControl>

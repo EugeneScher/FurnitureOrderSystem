@@ -1,4 +1,4 @@
-﻿using FurnitureOrderSystem.Data; // Важная директива
+﻿using FurnitureOrderSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,18 +23,44 @@ namespace FurnitureOrderSystem
 
         private void ConfigureServices(IServiceCollection services)
         {
-            // Настройка ApplicationDbContext
+            // Настройка основного контекста БД
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlite("Data Source=FurnitureOrders.db");
+                options.EnableSensitiveDataLogging(); // Для отладки
+                options.EnableDetailedErrors(); // Для отладки
+            });
+
+            // Настройка контекста для аутентификации (если нужно)
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite("Data Source=auth.db"));
 
-            // Остальные сервисы...
+            // Регистрация других сервисов приложения...
+            // services.AddTransient<IMyService, MyService>();
         }
 
         private void InitializeDatabase()
         {
-            using var scope = ServiceProvider.CreateScope();
-            var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            dbContext.Database.Migrate();
+            try
+            {
+                using var scope = ServiceProvider.CreateScope();
+
+                // Инициализация основной БД
+                var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                dbContext.Database.Migrate(); // Применяем миграции
+                dbContext.InitializeDatabase(); // Заполняем начальные данные
+
+                // Инициализация БД аутентификации
+                var authDbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                authDbContext.Database.Migrate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка инициализации базы данных: {ex.Message}",
+                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Логирование ошибки или другие действия
+                Environment.Exit(1);
+            }
         }
     }
 }

@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FurnitureOrderSystem.Views"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <!-- Стиль для статусов в ComboBox -->
+        <Style TargetType="ComboBoxItem" x:Key="StatusComboBoxItemStyle">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Content}" Value="Новый">
+                    <Setter Property="Foreground" Value="Green"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Content}" Value="В производстве">
+                    <Setter Property="Foreground" Value="Orange"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Content}" Value="Готов">
+                    <Setter Property="Foreground" Value="Blue"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Content}" Value="Доставлен">
+                    <Setter Property="Foreground" Value="Purple"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,7 +37,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Order Header -->
+        <!-- Шапка заказа -->
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock Text="Заказ №" FontSize="16" FontWeight="Bold"/>
             <TextBlock Text="{Binding Order.Id}" FontSize="16" FontWeight="Bold" Margin="5,0,0,0"/>
@@ -23,7 +45,7 @@
             <TextBlock Text="{Binding Order.OrderDate, StringFormat={}{0:dd.MM.yyyy}}" FontSize="16" Margin="5,0,0,0"/>
         </StackPanel>
 
-        <!-- Customer Info -->
+        <!-- Информация о клиенте -->
         <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="0,10,0,10" Padding="10">
             <StackPanel>
                 <TextBlock Text="Клиент:" FontWeight="Bold"/>
@@ -33,29 +55,41 @@
             </StackPanel>
         </Border>
 
-        <!-- Order Items -->
+        <!-- Список товаров -->
         <DataGrid Grid.Row="2" 
                   ItemsSource="{Binding Order.OrderItems}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
-                  Margin="0,0,0,10">
+                  Margin="0,0,0,10"
+                  materialDesign:DataGridAssist.CellPadding="10,5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Продукт" Binding="{Binding Product.Name}" Width="*"/>
                 <DataGridTextColumn Header="Цена" Binding="{Binding UnitPrice, StringFormat={}{0:C}}" Width="Auto"/>
                 <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="Auto"/>
-                <DataGridTextColumn Header="Сумма" Binding="{Binding Path=., Converter={StaticResource OrderItemTotalConverter}}" Width="Auto"/>
+                <DataGridTextColumn Header="Сумма" Width="Auto">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0:C}">
+                            <Binding Path="UnitPrice"/>
+                            <Binding Path="Quantity"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- Order Summary -->
+        <!-- Итоговая сумма -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
             <TextBlock Text="Итого:" FontWeight="Bold" Margin="0,0,10,0"/>
             <TextBlock Text="{Binding Order.TotalAmount, StringFormat={}{0:C}}" FontWeight="Bold"/>
         </StackPanel>
 
-        <!-- Status Controls -->
+        <!-- Управление статусом -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
-            <ComboBox SelectedValue="{Binding Order.Status}" Width="150" Margin="0,0,10,0">
+            <ComboBox x:Name="StatusComboBox" 
+                      SelectedValue="{Binding Order.Status}" 
+                      Width="150" 
+                      Margin="0,0,10,0"
+                      ItemContainerStyle="{StaticResource StatusComboBoxItemStyle}">
                 <ComboBoxItem Content="Новый"/>
                 <ComboBoxItem Content="В производстве"/>
                 <ComboBoxItem Content="Готов"/>

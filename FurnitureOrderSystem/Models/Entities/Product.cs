@@ -8,5 +8,6 @@ public class Product
     public decimal Price { get; set; }
     public string Category { get; set; }
     public string ImagePath { get; set; }
+    public int StockQuantity { get; set; }
     public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

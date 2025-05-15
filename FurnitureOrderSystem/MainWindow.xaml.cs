@@ -1,6 +1,7 @@
 ﻿using FurnitureOrderSystem.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using FurnitureOrderSystem.Models.ViewModels;
 
 namespace FurnitureOrderSystem
 {

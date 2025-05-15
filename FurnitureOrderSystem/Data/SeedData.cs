@@ -10,30 +10,37 @@ namespace FurnitureOrderSystem.Data
     {
         public static async Task Initialize(IServiceProvider serviceProvider)
         {
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var userManager = serviceProvider.GetRequiredService<UserManager<User>>();
+            using var scope = serviceProvider.CreateScope();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
 
+            // Инициализация ролей
             string[] roles = { "Admin", "Manager", "User" };
-            foreach (var role in roles)
+            foreach (var roleName in roles)
             {
-                if (!await roleManager.RoleExistsAsync(role))
+                if (!await roleManager.RoleExistsAsync(roleName))
                 {
-                    await roleManager.CreateAsync(new IdentityRole(role));
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
                 }
             }
 
+            // Создание администратора
             var admin = new User
             {
                 UserName = "admin",
                 Email = "admin@furniture.com",
                 FirstName = "Admin",
-                LastName = "System"
+                LastName = "System",
+                EmailConfirmed = true // Рекомендуется подтвердить email для seed-пользователя
             };
 
             if (await userManager.FindByNameAsync(admin.UserName) == null)
             {
-                await userManager.CreateAsync(admin, "Admin123!");
-                await userManager.AddToRoleAsync(admin, "Admin");
+                var result = await userManager.CreateAsync(admin, "Admin123!");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(admin, "Admin");
+                }
             }
         }
     }

@@ -1,50 +1,110 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using FurnitureOrderSystem.Models.Entities;
+using System;
 
 namespace FurnitureOrderSystem.Data
 {
-    public class AppDbContext : DbContext
+    /// <summary>
+    /// Контекст базы данных для системы заказов мебели
+    /// Объединяет Identity для аутентификации и бизнес-сущности
+    /// </summary>
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) { }
+
+        // DbSet'ы для всех сущностей системы
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
 
-        // Должен быть только ОДИН метод OnConfiguring
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlite("Data Source=FurnitureOrders.db");
-            }
+            base.OnModelCreating(builder); // Важно вызывать сначала для Identity
+
+            // Конфигурация отношений между сущностями
+            ConfigureRelationships(builder);
+
+            // Заполнение начальными данными
+            SeedInitialData(builder);
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        /// <summary>
+        /// Настройка всех отношений между сущностями
+        /// </summary>
+        private void ConfigureRelationships(ModelBuilder builder)
         {
-            // Настройка отношений и ограничений
-            modelBuilder.Entity<Order>()
+            // Заказ -> Клиент
+            builder.Entity<Order>()
                 .HasOne(o => o.Customer)
                 .WithMany(c => c.Orders)
-                .HasForeignKey(o => o.CustomerId);
+                .HasForeignKey(o => o.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<OrderItem>()
+            // Заказ -> Позиции заказа
+            builder.Entity<OrderItem>()
                 .HasOne(oi => oi.Order)
                 .WithMany(o => o.OrderItems)
-                .HasForeignKey(oi => oi.OrderId);
+                .HasForeignKey(oi => oi.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<OrderItem>()
+            // Позиция заказа -> Товар
+            builder.Entity<OrderItem>()
                 .HasOne(oi => oi.Product)
                 .WithMany(p => p.OrderItems)
-                .HasForeignKey(oi => oi.ProductId);
+                .HasForeignKey(oi => oi.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
 
-            // Инициализация начальных данных
-            modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Диван 'Комфорт'", Description = "Удобный трехместный диван", Price = 25000, Category = "Диваны", ImagePath = "sofa.png" },
-                new Product { Id = 2, Name = "Стол обеденный", Description = "Деревянный стол на 6 персон", Price = 15000, Category = "Столы", ImagePath = "table.png" },
-                new Product { Id = 3, Name = "Шкаф 'Модерн'", Description = "Шкаф с зеркальными дверями", Price = 32000, Category = "Шкафы", ImagePath = "wardrobe.png" }
+        /// <summary>
+        /// Заполнение базы начальными данными
+        /// </summary>
+        private void SeedInitialData(ModelBuilder builder)
+        {
+            // Начальные товары
+            builder.Entity<Product>().HasData(
+                new Product
+                {
+                    Id = 1,
+                    Name = "Диван 'Классик'",
+                    Price = 25000,
+                    Category = "Диваны",
+                    Description = "Классический диван с деревянными ножками",
+                    StockQuantity = 10
+                },
+                new Product
+                {
+                    Id = 2,
+                    Name = "Стол обеденный",
+                    Price = 15000,
+                    Category = "Столы",
+                    Description = "Обеденный стол на 6 персон",
+                    StockQuantity = 15
+                }
             );
 
-            modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, Name = "Иванов Иван", Phone = "+79123456789", Email = "ivanov@example.com", Address = "ул. Ленина, 10" }
+            // Начальные клиенты
+            builder.Entity<Customer>().HasData(
+                new Customer
+                {
+                    Id = 1,
+                    Name = "Иванов Иван",
+                    Phone = "+79123456789",
+                    Email = "ivan@example.com",
+                    Address = "ул. Центральная, 1",
+                    RegistrationDate = DateTime.Now.AddDays(-30)
+                },
+                new Customer
+                {
+                    Id = 2,
+                    Name = "Петрова Мария",
+                    Phone = "+79098765432",
+                    Email = "maria@example.com",
+                    Address = "пр. Ленина, 15",
+                    RegistrationDate = DateTime.Now.AddDays(-15)
+                }
             );
         }
     }
