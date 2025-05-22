@@ -5,10 +5,11 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using FurnitureOrderSystem.Audit;
 
 namespace FurnitureOrderSystem.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<User, Role, string>
+    public class ApplicationDbContext : IdentityDbContext<User, UserRole, string>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
@@ -56,6 +57,21 @@ namespace FurnitureOrderSystem.Data
                         break;
                 }
             }
+        }
+
+        private void ConfigureEntities(ModelBuilder builder)
+        {
+            // TODO: Конфигурация сущностей
+        }
+
+        private void ConfigureRelationships(ModelBuilder builder)
+        {
+            // TODO: Настройка отношений
+        }
+
+        private void SeedInitialData(ModelBuilder builder)
+        {
+            // TODO: Заполнение начальных данных
         }
     }
 }

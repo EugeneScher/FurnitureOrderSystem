@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FurnitureOrderSystem.Services;
-using System.Windows; // Важная директива
+using System.Windows; // Важная директива (da ladno?)
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,7 +19,8 @@ namespace FurnitureOrderSystem.Models.ViewModels
         {
             _authService = authService;
             _navigationService = navigationService;
-            CurrentUser = _authService.GetCurrentUsername();
+
+            CurrentUser = _authService.CurrentUsername;
         }
 
         [RelayCommand]

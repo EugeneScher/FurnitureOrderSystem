@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using FurnitureOrderSystem.Models.Entities;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FurnitureOrderSystem.Data
@@ -20,7 +19,7 @@ namespace FurnitureOrderSystem.Data
                 .ToListAsync();
         }
 
-        public async Task<Order> GetOrderWithDetailsByIdAsync(int id)
+        public async Task<Order?> GetOrderWithDetailsByIdAsync(int id)
         {
             return await _context.Set<Order>()
                 .Include(o => o.Customer)

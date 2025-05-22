@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FurnitureOrderSystem.Data
@@ -21,7 +20,7 @@ namespace FurnitureOrderSystem.Data
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(int id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -41,6 +40,8 @@ namespace FurnitureOrderSystem.Data
         public async Task DeleteAsync(int id)
         {
             var entity = await GetByIdAsync(id);
+            if (entity == null) return;
+
             _dbSet.Remove(entity);
             await _context.SaveChangesAsync();
         }

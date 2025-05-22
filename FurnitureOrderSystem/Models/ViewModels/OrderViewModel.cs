@@ -1,5 +1,4 @@
 ﻿using FurnitureOrderSystem.Models.Entities;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -13,7 +12,7 @@ namespace FurnitureOrderSystem.Models.ViewModels
         private readonly OrderRepository _orderRepository;
 
         [ObservableProperty]
-        private Order _order;
+        private Order? _order;
 
         public OrderViewModel(AppDbContext context, int orderId)
         {
@@ -22,14 +21,19 @@ namespace FurnitureOrderSystem.Models.ViewModels
             LoadOrderAsync(orderId);
         }
 
-        private async Task LoadOrderAsync(int orderId)
+        private async void LoadOrderAsync(int orderId)
         {
-            Order = await _orderRepository.GetOrderWithDetailsByIdAsync(orderId);
+            Order? order = await _orderRepository.GetOrderWithDetailsByIdAsync(orderId);
+            if (order == null) return;
+
+            Order = order;
         }
 
         [RelayCommand]
         private async Task UpdateStatus(string newStatus)
         {
+            if (Order == null) return;
+
             Order.Status = newStatus;
             await _orderRepository.UpdateAsync(Order);
         }
