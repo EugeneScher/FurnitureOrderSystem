@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using FurnitureOrderSystem.Models.Entities;
+
+namespace FurnitureOrderSystem.Utilities.Converters;
 
 public class OrderItemTotalConverter : IValueConverter
 {
