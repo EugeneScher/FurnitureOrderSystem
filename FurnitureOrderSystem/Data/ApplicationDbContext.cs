@@ -2,110 +2,60 @@
 using Microsoft.EntityFrameworkCore;
 using FurnitureOrderSystem.Models.Entities;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace FurnitureOrderSystem.Data
 {
-    /// <summary>
-    /// Контекст базы данных для системы заказов мебели
-    /// Объединяет Identity для аутентификации и бизнес-сущности
-    /// </summary>
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public class ApplicationDbContext : IdentityDbContext<User, Role, string>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        // DbSet'ы для всех сущностей системы
+        // Основные бизнес-сущности
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Delivery> Deliveries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder); // Важно вызывать сначала для Identity
+            base.OnModelCreating(builder);
 
-            // Конфигурация отношений между сущностями
+            // Конфигурация сущностей
+            ConfigureEntities(builder);
+
+            // Настройка отношений
             ConfigureRelationships(builder);
 
-            // Заполнение начальными данными
+            // Заполнение начальных данных
             SeedInitialData(builder);
         }
 
-        /// <summary>
-        /// Настройка всех отношений между сущностями
-        /// </summary>
-        private void ConfigureRelationships(ModelBuilder builder)
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            // Заказ -> Клиент
-            builder.Entity<Order>()
-                .HasOne(o => o.Customer)
-                .WithMany(c => c.Orders)
-                .HasForeignKey(o => o.CustomerId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Заказ -> Позиции заказа
-            builder.Entity<OrderItem>()
-                .HasOne(oi => oi.Order)
-                .WithMany(o => o.OrderItems)
-                .HasForeignKey(oi => oi.OrderId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Позиция заказа -> Товар
-            builder.Entity<OrderItem>()
-                .HasOne(oi => oi.Product)
-                .WithMany(p => p.OrderItems)
-                .HasForeignKey(oi => oi.ProductId)
-                .OnDelete(DeleteBehavior.Restrict);
+            UpdateAuditableEntities();
+            return await base.SaveChangesAsync(cancellationToken);
         }
 
-        /// <summary>
-        /// Заполнение базы начальными данными
-        /// </summary>
-        private void SeedInitialData(ModelBuilder builder)
+        private void UpdateAuditableEntities()
         {
-            // Начальные товары
-            builder.Entity<Product>().HasData(
-                new Product
+            foreach (var entry in ChangeTracker.Entries<IAuditable>())
+            {
+                switch (entry.State)
                 {
-                    Id = 1,
-                    Name = "Диван 'Классик'",
-                    Price = 25000,
-                    Category = "Диваны",
-                    Description = "Классический диван с деревянными ножками",
-                    StockQuantity = 10
-                },
-                new Product
-                {
-                    Id = 2,
-                    Name = "Стол обеденный",
-                    Price = 15000,
-                    Category = "Столы",
-                    Description = "Обеденный стол на 6 персон",
-                    StockQuantity = 15
+                    case EntityState.Added:
+                        entry.Entity.CreatedAt = DateTime.UtcNow;
+                        entry.Entity.UpdatedAt = DateTime.UtcNow;
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.UpdatedAt = DateTime.UtcNow;
+                        break;
                 }
-            );
-
-            // Начальные клиенты
-            builder.Entity<Customer>().HasData(
-                new Customer
-                {
-                    Id = 1,
-                    Name = "Иванов Иван",
-                    Phone = "+79123456789",
-                    Email = "ivan@example.com",
-                    Address = "ул. Центральная, 1",
-                    RegistrationDate = DateTime.Now.AddDays(-30)
-                },
-                new Customer
-                {
-                    Id = 2,
-                    Name = "Петрова Мария",
-                    Phone = "+79098765432",
-                    Email = "maria@example.com",
-                    Address = "пр. Ленина, 15",
-                    RegistrationDate = DateTime.Now.AddDays(-15)
-                }
-            );
+            }
         }
     }
 }

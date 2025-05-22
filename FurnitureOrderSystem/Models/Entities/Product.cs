@@ -9,5 +9,7 @@ public class Product
     public string Category { get; set; }
     public string ImagePath { get; set; }
     public int StockQuantity { get; set; }
+    public int? CategoryId { get; set; }
+    public ProductCategory Category { get; set; }
     public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

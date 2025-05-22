@@ -1,7 +1,7 @@
-﻿using FurnitureOrderSystem.Views;
+﻿using FurnitureOrderSystem.Models.ViewModels;
+using FurnitureOrderSystem.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using FurnitureOrderSystem.Models.ViewModels;
 
 namespace FurnitureOrderSystem
 {
@@ -11,8 +11,6 @@ namespace FurnitureOrderSystem
         {
             InitializeComponent();
             DataContext = App.ServiceProvider.GetRequiredService<MainViewModel>();
-
-            // Теперь OrdersFrame будет распознаваться
             OrdersFrame.Content = App.ServiceProvider.GetRequiredService<OrdersView>();
         }
     }

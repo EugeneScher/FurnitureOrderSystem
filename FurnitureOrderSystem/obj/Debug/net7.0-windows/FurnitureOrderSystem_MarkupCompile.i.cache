@@ -16,5 +16,5 @@ F:\DiplomRoma\FurnitureOrderSystem\FurnitureOrderSystem\App.xaml
 2471361762650
 MainWindow.xaml;Views\Account\LoginView.xaml;Views\Account\RegisterView.xaml;Views\OrderDetailView.xaml;Views\OrdersView.xaml;Windows\LoginWindow.xaml;Windows\RegisterWindow.xaml;
 
-True
+False
 
